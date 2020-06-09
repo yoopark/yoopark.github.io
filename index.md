@@ -1,5 +1,5 @@
 ---
-title: /
+title: yopark
 layout: home
 permalink: /
 ---

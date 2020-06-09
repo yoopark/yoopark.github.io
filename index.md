@@ -1,7 +1,7 @@
 ---
 title: yopark
 layout: home
-permalink: /
+permalink: /home
 ---
 
 # Lorem ipsum

@@ -1,9 +1,17 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-  
+@font-face {
+	font-family: "Noto Sans KR Thin";
+	src: url('NotoSansKR-100.otf') format('opentype');
+}
+
+@font-face {
+	font-family: "Noto Sans KR Bold";
+	src: url('NotoSansKR-900.otf') format('opentype');
+}
+
 html {
 	margin: 0;
 	padding: 0;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Noto Sans KR Thin';
 }
 
 body {
@@ -27,13 +35,14 @@ body {
 .swiper {
 	margin: 0;
 	display: flex;
-	font-size: 500px;
+	font-size: 55vh;
 	font-weight: 700;
 	color: #B8B4B5;
 }
 
 .swiper li {
 	list-style-type: none;
+	font-family: 'Noto Sans KR Bold';
 }
 
 .swiper a {
@@ -43,6 +52,6 @@ body {
 }
 
 .swiper a:hover {
-	font-size: 700px;
+	font-size: 70vh;
 }
 

@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+  
+html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+	padding: 20px;
+	margin: 0px;
+	background-color: #F5F1F2;
+}
+
+.logo {
+	display: flex;
+}
+
+.logo p {
+	font-size: 30px;
+	font-weight: 600;
+	margin: 0px;
+	color: #6B4951;
+	padding-left: 15px;
+}
+
+.swiper {
+	margin: 0;
+	display: flex;
+	font-size: 500px;
+	font-weight: 700;
+	color: #B8B4B5;
+}
+
+.swiper li {
+	list-style-type: none;
+}
+
+.swiper a {
+	text-decoration: none;
+	color: #EEA2B5;
+	transition: font-size 1s;
+}
+
+.swiper a:hover {
+	font-size: 700px;
+}
+

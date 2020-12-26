@@ -49,6 +49,7 @@ body {
 }
 
 #font-O:hover {
+	-webkit-transform: scale(1.6, 1.6);
 	transform: scale(1.6, 1.6);
 	opacity: 0.5;
 	padding-left: 100px;

@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Noto Sans KR Thin";
-	src: url('NotoSansKR-100.otf') format('opentype');
+	src: url('font/NotoSansKR-100.otf') format('opentype');
 }
 
 @font-face {
 	font-family: "Noto Sans KR Bold";
-	src: url('NotoSansKR-900.otf') format('opentype');
+	src: url('font/NotoSansKR-900.otf') format('opentype');
 }
 
 html {
@@ -18,11 +18,11 @@ body {
 	padding: 20px;
 	margin: 0px;
 	background-color: #F5F1F2;
-	cursor: url(cursor.png), auto;
+	cursor: url(image/cursor.png), auto;
 }
 
 a {
-	cursor: url(link.png), auto;
+	cursor: url(image/link.png), auto;
 }
 
 .logo {

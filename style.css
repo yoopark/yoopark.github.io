@@ -18,6 +18,11 @@ body {
 	padding: 20px;
 	margin: 0px;
 	background-color: #F5F1F2;
+	cursor: url(cursor.png), auto;
+}
+
+a {
+	cursor: url(link.png), auto;
 }
 
 .logo {
@@ -70,5 +75,6 @@ body {
 }
 
 .swiper .hidden-content p {
+	font-size: 3vh;
 	margin: 0;
 }

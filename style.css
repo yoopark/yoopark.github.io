@@ -49,11 +49,23 @@ a {
 	height: 55vh;
 }
 
-#font-O {
+img {
 	transition: .5s;
 }
 
-#font-O:hover {
+.box {
+	display: flex;
+}
+
+.special:nth-of-type(n + 2), .end {
+	position: absolute;
+}
+
+.clocking {
+	display: none;
+}
+
+.special:hover img {
 	-webkit-transform: scale(1.6, 1.6);
 	transform: scale(1.6, 1.6);
 	opacity: 0.5;
@@ -61,20 +73,27 @@ a {
 	padding-right: 100px;
 }
 
-.swiper .hidden-content {
+.special:hover .hidden {
+	opacity: 100%;
+}
+
+.hidden {
 	font-size: 3vh;
 	color: #6B4951;
 	position: absolute;
 	bottom: 0%;
 	padding-left: 70px;
+	opacity: 0%;
+	transition: .5s;
 }
 
-.swiper .hidden-content h3 {
+.hidden > h3 {
 	font-size: 7vh;
 	margin: 0;
 }
 
-.swiper .hidden-content p {
+.hidden > p {
 	font-size: 3vh;
 	margin: 0;
+	white-space: nowrap;
 }

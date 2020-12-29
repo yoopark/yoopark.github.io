@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Yooooopark</title>
 </head>
-<body>
+<body onmousemove="adaptCoordinates(event)">
 	<div class="logo">
 		<img src="image/chocolate.jpg" width="40" height="40">
 		<p>Yooooopark</p>
@@ -15,25 +15,72 @@
 
 	<ul class="swiper">
 		<li><img src="image/font-Y.png"></li>
-		<li>
-			<a href="01/"><img id="font-O" src="image/font-O.png"></a>
-			<div class="hidden-content">
-				<h3>01</h3>
-				<p>JavaScript Drum Kit</p>
-			</div>
-		</li>
-		<li>
-			<a href="02/"><img id="font-O" src="image/font-O.png"></a>
-			<div class="hidden-content">
-				<h3>02</h3>
-				<p>JS + CSS Clock</p>
-			</div>
-		</li>
+		<div class="box">
+			<li class="special">
+				<a href="01/"><img src="image/font-O.png"></a>
+				<div class="hidden">
+					<h3>01</h3>
+					<p>JavaScript Drum Kit</p>
+				</div>
+			</li>
+			<li class="special">
+				<a href="02/"><img src="image/font-O.png"></a>
+				<div class="hidden">
+					<h3>02</h3>
+					<p>JS + CSS Clock</p>
+				</div>
+			</li>
+			<li class="special">
+				<a href="03/"><img src="image/font-O.png"></a>
+				<div class="hidden">
+					<h3>03</h3>
+					<p>Playing with CSS Variables and JS</p>
+				</div>
+			</li>
+			<li class="special">
+				<a href="04/"><img src="image/font-O.png"></a>
+				<div class="hidden">
+					<h3>04</h3>
+					<p>Array Cardio Day 1</p>
+				</div>
+			</li>
+			<li class="special">
+				<a href="05/"><img src="image/font-O.png"></a>
+				<div class="hidden">
+					<h3>05</h3>
+					<p>Flex Panels Image Gallery</p>
+				</div>
+			</li>
+			<li class="end">
+				<img src="image/font-O.png">
+			</li>
+		</div>
 		<li><img src="image/font-P.png"></li>
 		<li><img src="image/font-A.png"></li>
 		<li><img src="image/font-R.png"></li>
 		<li><img src="image/font-K.png"></li>
 	</ul>
+
+	<script>
+		const end = document.querySelector('.end');
+
+		function changeProperty() {
+			this.classList.add('clocking');
+			const specials = document.querySelectorAll('.special:nth-of-type(n + 2), .end');
+			specials.forEach(special => special.setAttribute("style", "position: static;"));
+		}
+
+		end.addEventListener('click', changeProperty);
+
+		function adaptCoordinates(e) {
+			var width = window.innerWidth;
+			var x = event.clientX;
+			var pct = (x / width);
+
+			window.scrollTo(event.pageX * pct, event.pageY, 'smooth');
+		}
+
+	</script>
 
 </body>
 </html>

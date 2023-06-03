@@ -1,0 +1,16 @@
+import { Link } from 'gatsby'
+
+type PostItemProps = {
+  title: string
+  date: string
+  link: string
+}
+
+export const PostItem = ({ title, date, link }: PostItemProps) => {
+  return (
+    <Link to={link} className="flex flex-col items-center">
+      <h3 className="text-xl font-bold">{title}</h3>
+      <p className="text-sm">{date}</p>
+    </Link>
+  )
+}

@@ -2,33 +2,65 @@ import { Footer } from '@/components/Common/Footer';
 import { CategoryList } from '@/components/Main/CategoryList';
 import { Introduction } from '@/components/Main/Introduction';
 import { PostList } from '@/components/Main/PostList';
-import type { PostListItemType } from '@/types/PostItem';
+import type { PostType } from '@/types/PostItem';
 import { graphql } from 'gatsby';
-
-const CATEGORY_LIST = {
-  All: 5,
-  Web: 3,
-  Mobile: 2,
-};
+import queryString, { ParsedQuery } from 'query-string';
+import { useMemo } from 'react';
 
 type IndexPageProps = {
+  location: {
+    search: string;
+  };
   data: {
     allMarkdownRemark: {
-      edges: PostListItemType[];
+      edges: PostType[];
     };
   };
 };
 
 const IndexPage = ({
+  location: { search },
   data: {
     allMarkdownRemark: { edges },
   },
 }: IndexPageProps) => {
+  const parsed: ParsedQuery<string> = queryString.parse(search);
+  const selectedCategory =
+    typeof parsed.category !== 'string' || !parsed.category
+      ? 'All'
+      : parsed.category;
+
+  const categoryList = useMemo(
+    () =>
+      edges.reduce(
+        (
+          list: { [key: string]: number },
+          {
+            node: {
+              frontmatter: { categories },
+            },
+          }: PostType,
+        ) => {
+          categories.forEach((category) => {
+            if (list[category] === undefined) list[category] = 1;
+            else list[category]++;
+          });
+          list['All']++;
+          return list;
+        },
+        { All: 0 },
+      ),
+    [],
+  );
+
   return (
     <div className="flex flex-col h-full">
       <Introduction />
-      <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
-      <PostList posts={edges} />
+      <CategoryList
+        selectedCategory={selectedCategory}
+        categoryList={categoryList}
+      />
+      <PostList selectedCategory={selectedCategory} posts={edges} />
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@ export type PostFrontmatterType = {
   categories: string[];
 };
 
-export type PostListItemType = {
+export type PostType = {
   node: {
     id: string;
     frontmatter: PostFrontmatterType;

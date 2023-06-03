@@ -1,7 +1,7 @@
 ---
 date: '2020-07-29'
 title: '이 차는 이제 제껍니다'
-categories: ['Web', 'SEO', 'Optimization']
+categories: ['Web', 'SEO', 'OptimusPrime']
 ---
 
 ### 1. Help Google Bot to Find My Contents

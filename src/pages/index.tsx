@@ -38,9 +38,7 @@ export default IndexPage;
 
 export const getPostList = graphql`
   query getPostList {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
-    ) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id

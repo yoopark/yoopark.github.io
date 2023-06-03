@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
 exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
-  setHtmlAttributes({ lang: `en` })
+  setHtmlAttributes({ lang: `en` });
 
   // https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/
   setHeadComponents([
@@ -49,7 +49,7 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
     />,
     <link
       rel="preload"
-      href="/fonts/Pretendard-Semibold.woff2"
+      href="/fonts/Pretendard-SemiBold.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -75,5 +75,5 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       type="font/woff2"
       crossOrigin="anonymous"
     />,
-  ])
-}
+  ]);
+};

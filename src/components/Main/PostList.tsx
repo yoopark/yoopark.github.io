@@ -1,11 +1,11 @@
-import type { PostType } from '@/types/PostItem';
+import type { PostListItemType } from '@/types/PostItem';
 import { useInfiniteScroll } from '@hooks/useInfiniteScroll';
 import { useEffect, useMemo, useState } from 'react';
 import { PostItem } from './PostItem';
 
 type PostListProps = {
   selectedCategory: string;
-  posts: PostType[];
+  posts: PostListItemType[];
 };
 
 const NUMBER_OF_ITEMS_PER_PAGE = 10;
@@ -15,7 +15,7 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
 
   const [count, setCount] = useState<number>(1);
 
-  const postListByCategory = useMemo<PostType[]>(
+  const postListByCategory = useMemo<PostListItemType[]>(
     () =>
       posts.filter(
         ({
@@ -30,7 +30,7 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
     [selectedCategory],
   );
 
-  const postList = useMemo<PostType[]>(
+  const postList = useMemo<PostListItemType[]>(
     () => postListByCategory.slice(0, count * NUMBER_OF_ITEMS_PER_PAGE),
     [count, selectedCategory],
   );
@@ -45,9 +45,17 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
 
   return (
     <div className="flex flex-col gap-6 max-w-screen-sm w-full m-auto">
-      {postList.map(({ node: { id, frontmatter } }) => (
-        <PostItem {...frontmatter} link="/" key={id} />
-      ))}
+      {postList.map(
+        ({
+          node: {
+            id,
+            fields: { slug },
+            frontmatter,
+          },
+        }) => (
+          <PostItem {...frontmatter} link={slug} key={id} />
+        ),
+      )}
       <div ref={ref} className="w-full h-1 bg-transparent"></div>
     </div>
   );

@@ -2,7 +2,7 @@ import { Footer } from '@/components/Common/Footer';
 import { CategoryList } from '@/components/Main/CategoryList';
 import { Introduction } from '@/components/Main/Introduction';
 import { PostList } from '@/components/Main/PostList';
-import type { PostType } from '@/types/PostItem';
+import type { PostListItemType } from '@/types/PostItem';
 import { graphql } from 'gatsby';
 import queryString, { ParsedQuery } from 'query-string';
 import { useMemo } from 'react';
@@ -13,7 +13,7 @@ type IndexPageProps = {
   };
   data: {
     allMarkdownRemark: {
-      edges: PostType[];
+      edges: PostListItemType[];
     };
   };
 };
@@ -39,7 +39,7 @@ const IndexPage = ({
             node: {
               frontmatter: { categories },
             },
-          }: PostType,
+          },
         ) => {
           categories.forEach((category) => {
             if (list[category] === undefined) list[category] = 1;
@@ -70,10 +70,15 @@ export default IndexPage;
 
 export const getPostList = graphql`
   query getPostList {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      sort: [{ frontmatter: { date: DESC } }, { frontmatter: { title: ASC } }]
+    ) {
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "YYYYMMDD")

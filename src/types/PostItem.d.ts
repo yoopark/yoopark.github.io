@@ -4,9 +4,12 @@ export type PostFrontmatterType = {
   categories: string[];
 };
 
-export type PostType = {
+export type PostListItemType = {
   node: {
     id: string;
+    fields: {
+      slug: string;
+    };
     frontmatter: PostFrontmatterType;
   };
 };

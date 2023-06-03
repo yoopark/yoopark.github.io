@@ -1,5 +1,5 @@
 import type { PostType } from '@/types/PostItem';
-import { useMemo } from 'react';
+import useInfiniteScroll from '@hooks/useInfiniteScroll';
 import { PostItem } from './PostItem';
 
 type PostListProps = {
@@ -8,23 +8,14 @@ type PostListProps = {
 };
 
 export const PostList = ({ selectedCategory, posts }: PostListProps) => {
-  const postListData = useMemo(
-    () =>
-      posts.filter(
-        ({
-          node: {
-            frontmatter: { categories },
-          },
-        }) =>
-          selectedCategory !== 'All'
-            ? categories.includes(selectedCategory)
-            : true,
-      ),
-    [selectedCategory, posts],
-  );
+  const { containerRef, postList } = useInfiniteScroll(selectedCategory, posts);
+
   return (
-    <div className="flex flex-col gap-6 max-w-screen-sm w-full m-auto">
-      {postListData.map(({ node: { id, frontmatter } }) => (
+    <div
+      ref={containerRef}
+      className="flex flex-col gap-6 max-w-screen-sm w-full m-auto"
+    >
+      {postList.map(({ node: { id, frontmatter } }) => (
         <PostItem {...frontmatter} link="/" key={id} />
       ))}
     </div>

@@ -7,6 +7,73 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: `en` })
+
+  // https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/
+  setHeadComponents([
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Thin.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-ExtraLight.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-ExtraBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Pretendard-Black.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+  ])
 }

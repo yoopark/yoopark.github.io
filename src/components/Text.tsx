@@ -1,9 +1,9 @@
 type TextProps = {
-  text: string
-}
+  text: string;
+};
 
 const Text = ({ text }: TextProps) => {
-  return <div>{text}</div>
-}
+  return <div>{text}</div>;
+};
 
-export default Text
+export default Text;

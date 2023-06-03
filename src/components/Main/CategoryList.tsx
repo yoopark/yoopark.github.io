@@ -1,11 +1,11 @@
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
 type CategoryListProps = {
-  selectedCategory: string
+  selectedCategory: string;
   categoryList: {
-    [key: string]: number
-  }
-}
+    [key: string]: number;
+  };
+};
 
 export const CategoryList = ({
   selectedCategory,
@@ -22,5 +22,5 @@ export const CategoryList = ({
         </Link>
       ))}
     </div>
-  )
-}
+  );
+};

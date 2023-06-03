@@ -1,16 +1,16 @@
-import Text from '@/components/Text'
-import { graphql } from 'gatsby'
+import Text from '@/components/Text';
+import { graphql } from 'gatsby';
 type InfoPageProps = {
   data: {
     site: {
       siteMetadata: {
-        title: string
-        description: string
-        author: string
-      }
-    }
-  }
-}
+        title: string;
+        description: string;
+        author: string;
+      };
+    };
+  };
+};
 
 const InfoPage = ({
   data: {
@@ -25,10 +25,10 @@ const InfoPage = ({
       <Text text={description} />
       <Text text={author} />
     </div>
-  )
-}
+  );
+};
 
-export default InfoPage
+export default InfoPage;
 
 export const metadataQuery = graphql`
   {
@@ -40,4 +40,4 @@ export const metadataQuery = graphql`
       }
     }
   }
-`
+`;

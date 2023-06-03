@@ -1,10 +1,7 @@
-import { Link } from 'gatsby'
+import type { PostFrontmatterType } from '@/types/PostItem';
+import { Link } from 'gatsby';
 
-type PostItemProps = {
-  title: string
-  date: string
-  link: string
-}
+type PostItemProps = PostFrontmatterType & { link: string };
 
 export const PostItem = ({ title, date, link }: PostItemProps) => {
   return (
@@ -12,5 +9,5 @@ export const PostItem = ({ title, date, link }: PostItemProps) => {
       <h3 className="text-xl font-bold">{title}</h3>
       <p className="text-sm">{date}</p>
     </Link>
-  )
-}
+  );
+};

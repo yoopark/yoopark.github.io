@@ -1,21 +1,16 @@
-import { PostItem } from './PostItem'
+import type { PostListItemType } from '@/types/PostItem';
+import { PostItem } from './PostItem';
 
-const POST_ITEM_DATA = {
-  title: 'Gatsby로 블로그 만들기',
-  date: '230115',
-  link: 'https://yoopark.github.io',
-}
+type PostListProps = {
+  posts: PostListItemType[];
+};
 
-export const PostList = () => {
+export const PostList = ({ posts }: PostListProps) => {
   return (
     <div className="flex flex-col gap-6 max-w-screen-sm w-full m-auto">
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
+      {posts.map(({ node: { id, frontmatter } }) => (
+        <PostItem {...frontmatter} link="https://yoopark.github.io" key={id} />
+      ))}
     </div>
-  )
-}
+  );
+};

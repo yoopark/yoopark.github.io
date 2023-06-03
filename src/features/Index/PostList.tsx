@@ -44,7 +44,7 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
   useEffect(() => setCount(1), [selectedCategory]);
 
   return (
-    <div className="flex flex-col gap-6 max-w-screen-sm w-full m-auto">
+    <div className="flex flex-col gap-8 max-w-screen-sm w-full m-auto">
       {postList.map(
         ({
           node: {

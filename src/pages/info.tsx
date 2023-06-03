@@ -1,4 +1,4 @@
-import Text from '@/components/Text';
+import Text from '@components/common/Text';
 import { graphql } from 'gatsby';
 type InfoPageProps = {
   data: {

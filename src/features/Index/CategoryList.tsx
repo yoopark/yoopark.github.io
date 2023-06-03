@@ -12,7 +12,7 @@ export const CategoryList = ({
   categoryList,
 }: CategoryListProps) => {
   return (
-    <div className="w-full flex justify-center gap-4">
+    <div className="w-full h-24 flex items-center justify-center gap-4">
       {Object.entries(categoryList).map(([name, count]) => (
         <Link to={`/?category=${name}`} key={name} className="flex">
           <div className={`${name === selectedCategory && 'font-bold'}`}>

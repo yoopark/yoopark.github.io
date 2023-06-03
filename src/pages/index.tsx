@@ -1,8 +1,7 @@
-import { Footer } from '@/components/Common/Footer';
-import { CategoryList } from '@/components/Main/CategoryList';
-import { Introduction } from '@/components/Main/Introduction';
-import { PostList } from '@/components/Main/PostList';
 import type { PostListItemType } from '@/types/PostItem';
+import { CategoryList } from '@features/Index/CategoryList';
+import { PostList } from '@features/Index/PostList';
+import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
 import queryString, { ParsedQuery } from 'query-string';
 import { useMemo } from 'react';
@@ -54,15 +53,13 @@ const IndexPage = ({
   );
 
   return (
-    <div className="flex flex-col h-full">
-      <Introduction />
+    <MainLayout>
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </div>
+    </MainLayout>
   );
 };
 

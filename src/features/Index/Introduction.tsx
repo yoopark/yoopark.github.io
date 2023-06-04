@@ -7,8 +7,8 @@ type IntroductionProps = {
 
 export const Introduction = ({ profileImage }: IntroductionProps) => {
   return (
-    <header className="w-full flex justify-center items-center pb-16">
+    <div className="w-full center">
       <ProfileImage profileImage={profileImage} />
-    </header>
+    </div>
   );
 };

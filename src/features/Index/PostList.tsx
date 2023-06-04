@@ -44,7 +44,7 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
   useEffect(() => setCount(1), [selectedCategory]);
 
   return (
-    <div className="flex flex-col gap-10 mx-auto my-20">
+    <ul className="gap-10 my-20 vstack">
       {postList.map(
         ({
           node: {
@@ -57,6 +57,6 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
         ),
       )}
       <div ref={ref} className="w-full h-1 bg-transparent"></div>
-    </div>
+    </ul>
   );
 };

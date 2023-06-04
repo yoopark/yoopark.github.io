@@ -6,11 +6,11 @@ type PostHeaderProps = {
 
 export const PostHeader = ({ title, date, categories }: PostHeaderProps) => {
   return (
-    <div className="w-full h-60 max-w-screen-sm m-auto flex flex-col justify-center items-center gap-5">
+    <div className="justify-center w-full gap-5 vstack h-60">
       <h1 className="text-4xl font-extrabold text-center">{title}</h1>
-      <p>
+      <span>
         {date} / {categories.join(', ')}
-      </p>
+      </span>
     </div>
   );
 };

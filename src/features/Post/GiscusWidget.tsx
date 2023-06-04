@@ -26,5 +26,5 @@ export const GiscusWidget = () => {
     document.body.appendChild(script);
   }, []);
 
-  return <div className="giscus" />;
+  return <div className="mt-24 giscus" />;
 };

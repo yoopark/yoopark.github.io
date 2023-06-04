@@ -4,8 +4,8 @@ import { Link } from 'gatsby';
 const NotFoundPage = () => {
   return (
     <MainLayout>
-      <div className="flex flex-col items-center gap-5">
-        <h1 className="text-2xl font-black m-auto">Not Found</h1>
+      <div className="gap-5 vstack">
+        <h1 className="text-2xl font-black">Not Found</h1>
         <Link to="/">
           <p className="text-sm">Home</p>
         </Link>

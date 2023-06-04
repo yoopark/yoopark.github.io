@@ -243,3 +243,17 @@
     tab-size: 2;
   }
 }
+
+@layer base {
+  .hstack {
+    @apply flex justify-center items-center;
+  }
+
+  .vstack {
+    @apply flex flex-col items-center;
+  }
+
+  .center {
+    @apply flex justify-center items-center;
+  }
+}

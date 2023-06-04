@@ -4,8 +4,8 @@ type PostContentProps = {
 
 export const PostContent = ({ html }: PostContentProps) => {
   return (
-    <div
-      className="w-full flex flex-col markdown-renderer mb-28"
+    <article
+      className="flex flex-col w-full markdown-renderer"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

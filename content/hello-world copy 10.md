@@ -1,8 +1,12 @@
 ---
-date: '2023-07-29'
+date: '2023-07-31'
 title: 'Hello, Mr My Yesterday ♬'
 categories: ['Web', 'SEO', 'Optimization']
 ---
+
+# 아 첫번째 헤더입니다~
+
+## 아 두번째 헤더입니다~
 
 ### 1. Help Google Bot to Find My Contents
 
@@ -20,6 +24,15 @@ Robots.txt 파일은 검색 엔진에 어떤 페이지를 크롤링해도 되는
 
 ## Source
 
-- SEO 기본 가이드
+1. SEO 기본 가이드
+2. 이건 뭐야
+3. 안녕?
+   1. 소제목 테스트
+   2. 소제목 테스트
 
-  [https://support.google.com/webmasters/answer/7451184?hl=ko&ref_topic=9460495](https://support.google.com/webmasters/answer/7451184?hl=ko&ref_topic=9460495)
+- 이건 ul이야.
+  - 소제목 테스트
+  - 소제목 테스트
+- 안녕?
+
+안녕하세요, 이게 바로 [링크](https://support.google.com/webmasters/answer/7451184?hl=ko&ref_topic=9460495)라는 겁니다.

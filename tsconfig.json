@@ -32,6 +32,7 @@
     "paths": {
       "@layouts/*": ["src/components/layouts/*"],
       "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
       "@features/*": ["src/features/*"],
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"],

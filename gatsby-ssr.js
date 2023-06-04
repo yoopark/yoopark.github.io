@@ -75,5 +75,40 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       type="font/woff2"
       crossOrigin="anonymous"
     />,
+    <link
+      rel="preload"
+      href="/fonts/FiraCode-Light.ttf"
+      as="font"
+      type="font/ttf"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/FiraCode-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/FiraCode-Medium.ttf"
+      as="font"
+      type="font/ttf"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/FiraCode-SemiBold.ttf"
+      as="font"
+      type="font/ttf"
+      crossOrigin="anonymous"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/FiraCode-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossOrigin="anonymous"
+    />,
   ]);
 };

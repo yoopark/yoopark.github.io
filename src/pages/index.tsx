@@ -1,9 +1,11 @@
 import type { PostListItemType } from '@/types/PostItem';
 import { Seo } from '@components/elements/Seo';
 import { CategoryList } from '@features/Index/CategoryList';
+import { Introduction } from '@features/Index/Introduction';
 import { PostList } from '@features/Index/PostList';
 import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import queryString, { ParsedQuery } from 'query-string';
 import { useMemo } from 'react';
 
@@ -15,6 +17,11 @@ type IndexPageProps = {
     allMarkdownRemark: {
       edges: PostListItemType[];
     };
+    file: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData;
+      };
+    };
   };
 };
 
@@ -22,6 +29,9 @@ const IndexPage = ({
   location: { search },
   data: {
     allMarkdownRemark: { edges },
+    file: {
+      childImageSharp: { gatsbyImageData },
+    },
   },
 }: IndexPageProps) => {
   const parsed: ParsedQuery<string> = queryString.parse(search);
@@ -55,6 +65,7 @@ const IndexPage = ({
 
   return (
     <MainLayout>
+      <Introduction profileImage={gatsbyImageData} />
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
@@ -85,6 +96,11 @@ export const getPostList = graphql`
             categories
           }
         }
+      }
+    }
+    file(name: { eq: "profile-image" }) {
+      childImageSharp {
+        gatsbyImageData(width: 500)
       }
     }
   }

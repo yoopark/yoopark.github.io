@@ -1,7 +1,5 @@
 # yoopark.github.io
 
-![Main Page Screenshot](/screenshot-main.png)
-
 🫠 있을거 빼고 다 없는 블로그
 
 마음에 드는 테마가 없어서 미니멀한 블로그를 직접 만들어보았습니다.

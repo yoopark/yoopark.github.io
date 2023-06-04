@@ -1,4 +1,5 @@
 import type { PostListItemType } from '@/types/PostItem';
+import { Seo } from '@components/elements/Seo';
 import { CategoryList } from '@features/Index/CategoryList';
 import { PostList } from '@features/Index/PostList';
 import { MainLayout } from '@layouts/MainLayout';
@@ -64,6 +65,8 @@ const IndexPage = ({
 };
 
 export default IndexPage;
+
+export const Head = () => <Seo />;
 
 export const getPostList = graphql`
   query getPostList {

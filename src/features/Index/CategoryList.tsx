@@ -12,12 +12,17 @@ export const CategoryList = ({
   categoryList,
 }: CategoryListProps) => {
   return (
-    <div className="w-full flex justify-center gap-4">
+    <div className="w-full flex justify-center gap-2">
       {Object.entries(categoryList).map(([name, count]) => (
         <Link to={`/?category=${name}`} key={name} className="flex">
-          <div className={`${name === selectedCategory && 'font-bold'}`}>
-            {name}
-            <span className="text-xs align-super">({count})</span>
+          <div
+            className={`${
+              name === selectedCategory &&
+              'bg-black text-white font-bold selection:text-black'
+            }`}
+          >
+            &nbsp;{name}
+            <sup>({count})</sup>&nbsp;
           </div>
         </Link>
       ))}

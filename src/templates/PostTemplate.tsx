@@ -1,4 +1,5 @@
 import type { PostPageItemType } from '@/types/PostItem';
+import { GiscusWidget } from '@features/Post/GiscusWidget';
 import { PostContent } from '@features/Post/PostContent';
 import { PostHeader } from '@features/Post/PostHeader';
 import { MainLayout } from '@layouts/MainLayout';
@@ -27,6 +28,7 @@ const PostTemplate = ({
     <MainLayout>
       <PostHeader title={title} date={date} categories={categories} />
       <PostContent html={html} />
+      <GiscusWidget />
     </MainLayout>
   );
 };

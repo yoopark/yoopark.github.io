@@ -1,4 +1,5 @@
 import type { PostPageItemType } from '@/types/PostItem';
+import { Seo } from '@components/elements/Seo';
 import { GiscusWidget } from '@features/Post/GiscusWidget';
 import { PostContent } from '@features/Post/PostContent';
 import { PostHeader } from '@features/Post/PostHeader';
@@ -34,6 +35,20 @@ const PostTemplate = ({
 };
 
 export default PostTemplate;
+
+export const Head = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}: PostTemplateProps) => {
+  const {
+    node: {
+      frontmatter: { title },
+    },
+  } = edges[0];
+
+  return <Seo title={title} />;
+};
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {

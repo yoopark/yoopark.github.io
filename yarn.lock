@@ -5435,6 +5435,17 @@ gatsby-plugin-image@^3.10.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
+gatsby-plugin-manifest@^5.10.0:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-5.10.0.tgz#27e479ac82b5c776e849155c0d62cc23d6947b5b"
+  integrity sha512-y3TUARyNaK29oD/8ZJOVvLVRvSvfKNjLHmNc0D6KPJRQld7T+ZKCZh4ylwN+Hor8vHnXKHyVoBZd+BIEjTBVAg==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    gatsby-core-utils "^4.10.0"
+    gatsby-plugin-utils "^4.10.0"
+    semver "^7.5.0"
+    sharp "^0.32.1"
+
 gatsby-plugin-page-creator@^5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-5.10.0.tgz#bbbc2be56784e7f0e512dee5428ab6f299ef8084"

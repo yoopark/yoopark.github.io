@@ -5,7 +5,7 @@ type PostContentProps = {
 export const PostContent = ({ html }: PostContentProps) => {
   return (
     <div
-      className="flex flex-col max-w-screen-sm m-auto markdown-renderer"
+      className="w-full flex flex-col markdown-renderer mb-28"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

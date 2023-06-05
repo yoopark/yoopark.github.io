@@ -6,8 +6,7 @@ import { PostList } from '@features/Index/PostList';
 import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import queryString, { ParsedQuery } from 'query-string';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 type IndexPageProps = {
   location: {
@@ -26,7 +25,6 @@ type IndexPageProps = {
 };
 
 const IndexPage = ({
-  location: { search },
   data: {
     allMarkdownRemark: { edges },
     file: {
@@ -34,11 +32,7 @@ const IndexPage = ({
     },
   },
 }: IndexPageProps) => {
-  const parsed: ParsedQuery<string> = queryString.parse(search);
-  const selectedCategory =
-    typeof parsed.category !== 'string' || !parsed.category
-      ? 'All'
-      : parsed.category;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categoryList = useMemo(
     () =>
@@ -68,6 +62,7 @@ const IndexPage = ({
       <Introduction profileImage={gatsbyImageData} />
       <CategoryList
         selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />

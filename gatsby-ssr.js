@@ -12,22 +12,22 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
 
   // Reference: https://www.gatsbyjs.com/docs/how-to/styling/using-local-fonts/
   setHeadComponents([
-    <link
-      key="pretendard-thin"
-      rel="preload"
-      href="/fonts/Pretendard-Thin.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="anonymous"
-    />,
-    <link
-      key="pretendard-extralight"
-      rel="preload"
-      href="/fonts/Pretendard-ExtraLight.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="anonymous"
-    />,
+    // <link
+    //   key="pretendard-thin"
+    //   rel="preload"
+    //   href="/fonts/Pretendard-Thin.woff2"
+    //   as="font"
+    //   type="font/woff2"
+    //   crossOrigin="anonymous"
+    // />,
+    // <link
+    //   key="pretendard-extralight"
+    //   rel="preload"
+    //   href="/fonts/Pretendard-ExtraLight.woff2"
+    //   as="font"
+    //   type="font/woff2"
+    //   crossOrigin="anonymous"
+    // />,
     <link
       key="pretendard-light"
       rel="preload"
@@ -44,22 +44,22 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       type="font/woff2"
       crossOrigin="anonymous"
     />,
-    <link
-      key="pretendard-medium"
-      rel="preload"
-      href="/fonts/Pretendard-Medium.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="anonymous"
-    />,
-    <link
-      key="pretendard-semibold"
-      rel="preload"
-      href="/fonts/Pretendard-SemiBold.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="anonymous"
-    />,
+    // <link
+    //   key="pretendard-medium"
+    //   rel="preload"
+    //   href="/fonts/Pretendard-Medium.woff2"
+    //   as="font"
+    //   type="font/woff2"
+    //   crossOrigin="anonymous"
+    // />,
+    // <link
+    //   key="pretendard-semibold"
+    //   rel="preload"
+    //   href="/fonts/Pretendard-SemiBold.woff2"
+    //   as="font"
+    //   type="font/woff2"
+    //   crossOrigin="anonymous"
+    // />,
     <link
       key="pretendard-bold"
       rel="preload"
@@ -84,14 +84,14 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       type="font/woff2"
       crossOrigin="anonymous"
     />,
-    <link
-      key="firacode-light"
-      rel="preload"
-      href="/fonts/FiraCode-Light.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-    />,
+    // <link
+    //   key="firacode-light"
+    //   rel="preload"
+    //   href="/fonts/FiraCode-Light.ttf"
+    //   as="font"
+    //   type="font/ttf"
+    //   crossOrigin="anonymous"
+    // />,
     <link
       key="firacode-regular"
       rel="preload"
@@ -100,29 +100,29 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       type="font/ttf"
       crossOrigin="anonymous"
     />,
-    <link
-      key="firacode-medium"
-      rel="preload"
-      href="/fonts/FiraCode-Medium.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-    />,
-    <link
-      key="firacode-semibold"
-      rel="preload"
-      href="/fonts/FiraCode-SemiBold.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-    />,
-    <link
-      key="firacode-bold"
-      rel="preload"
-      href="/fonts/FiraCode-Bold.ttf"
-      as="font"
-      type="font/ttf"
-      crossOrigin="anonymous"
-    />,
+    // <link
+    //   key="firacode-medium"
+    //   rel="preload"
+    //   href="/fonts/FiraCode-Medium.ttf"
+    //   as="font"
+    //   type="font/ttf"
+    //   crossOrigin="anonymous"
+    // />,
+    // <link
+    //   key="firacode-semibold"
+    //   rel="preload"
+    //   href="/fonts/FiraCode-SemiBold.ttf"
+    //   as="font"
+    //   type="font/ttf"
+    //   crossOrigin="anonymous"
+    // />,
+    // <link
+    //   key="firacode-bold"
+    //   rel="preload"
+    //   href="/fonts/FiraCode-Bold.ttf"
+    //   as="font"
+    //   type="font/ttf"
+    //   crossOrigin="anonymous"
+    // />,
   ]);
 };

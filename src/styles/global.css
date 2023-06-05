@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'Pretendard';
   font-weight: 100;
   font-display: swap;
@@ -14,23 +14,24 @@
   font-weight: 200;
   font-display: swap;
   src: url('/fonts/Pretendard-ExtraLight.woff2') format('woff2');
-}
+} */
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 300;
   font-display: swap;
-  src: url('/fonts/Pretendard-Light.woff2') format('woff2');
+  src: local('Pretendard'), url('/fonts/Pretendard-Light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
+  src: local('Pretendard'),
+    url('/fonts/Pretendard-Regular.woff2') format('woff2');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Pretendard';
   font-weight: 500;
   font-display: swap;
@@ -42,60 +43,64 @@
   font-weight: 600;
   font-display: swap;
   src: url('/fonts/Pretendard-SemiBold.woff2') format('woff2');
-}
+} */
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 700;
   font-display: swap;
-  src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
+  src: local('Pretendard'), url('/fonts/Pretendard-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 800;
   font-display: swap;
-  src: url('/fonts/Pretendard-ExtraBold.woff2') format('woff2');
+  src: local('Pretendard'),
+    url('/fonts/Pretendard-ExtraBold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 900;
   font-display: swap;
-  src: url('/fonts/Pretendard-Black.woff2') format('woff2');
+  src: local('Pretendard'), url('/fonts/Pretendard-Black.woff2') format('woff2');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Fira Code';
   font-weight: 300;
   font-display: swap;
   src: url('/fonts/FiraCode-Light.ttf');
-}
+} */
 
 @font-face {
   font-family: 'Fira Code';
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/FiraCode-Regular.ttf');
+  src: local('Fira Code'), url('/fonts/FiraCode-Regular.ttf');
 }
-@font-face {
+
+/* @font-face {
   font-family: 'Fira Code';
   font-weight: 500;
   font-display: swap;
   src: url('/fonts/FiraCode-Medium.ttf');
 }
+
 @font-face {
   font-family: 'Fira Code';
   font-weight: 600;
   font-display: swap;
   src: url('/fonts/FiraCode-SemiBold.ttf');
 }
+
 @font-face {
   font-family: 'Fira Code';
   font-weight: 700;
   font-display: swap;
   src: url('/fonts/FiraCode-Bold.ttf');
-}
+} */
 
 @layer base {
   html {
@@ -210,6 +215,7 @@
   .markdown-renderer img {
     display: block;
     margin: auto;
+    max-width: 100%;
   }
 
   /* Adjust Code Style */

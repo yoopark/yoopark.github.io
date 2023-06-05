@@ -15,6 +15,7 @@ export const CategoryList = ({
     <ul className="h-32 gap-2 select-none hstack">
       {Object.entries(categoryList).map(([name, count]) => (
         <li
+          key={name}
           className={`px-1 cursor-pointer ${
             name === selectedCategory
               ? 'bg-black text-white font-bold'

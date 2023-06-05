@@ -15,10 +15,10 @@ export const CategoryList = ({
     <ul className="h-32 gap-2 select-none hstack">
       {Object.entries(categoryList).map(([name, count]) => (
         <li
-          className={`px-1 cursor-pointer transition ${
+          className={`px-1 cursor-pointer ${
             name === selectedCategory
               ? 'bg-black text-white font-bold'
-              : 'hover:bg-slate-100'
+              : 'hover:bg-gray-100'
           }`}
           onClick={() => setSelectedCategory(name)}
         >

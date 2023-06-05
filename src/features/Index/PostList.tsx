@@ -44,7 +44,7 @@ export const PostList = ({ selectedCategory, posts }: PostListProps) => {
   useEffect(() => setCount(1), [selectedCategory]);
 
   return (
-    <ul className="gap-10 my-20 vstack">
+    <ul className="gap-10 my-10 vstack">
       {postList.map(
         ({
           node: {

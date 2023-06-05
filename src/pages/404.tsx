@@ -5,7 +5,7 @@ const NotFoundPage = () => {
   return (
     <MainLayout>
       <div className="gap-5 vstack">
-        <h1 className="text-2xl font-black">Not Found</h1>
+        <h1 className="text-2xl">Not Found</h1>
         <Link to="/">
           <p className="text-sm">Home</p>
         </Link>

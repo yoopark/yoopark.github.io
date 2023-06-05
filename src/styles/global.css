@@ -100,6 +100,7 @@
 @layer base {
   html {
     font-family: 'Pretendard', Roboto, sans-serif;
+    color: #262626;
   }
 
   /* 이미지 드래그 방지 */

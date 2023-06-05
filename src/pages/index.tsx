@@ -6,7 +6,7 @@ import { PostList } from '@features/Index/PostList';
 import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 type IndexPageProps = {
   location: {
@@ -57,15 +57,25 @@ const IndexPage = ({
     [],
   );
 
+  const [fade, setFade] = useState<boolean>(false);
+
+  useEffect(() => setFade(true), []);
+
   return (
     <MainLayout>
       <Introduction profileImage={gatsbyImageData} />
-      <CategoryList
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        categoryList={categoryList}
-      />
-      <PostList selectedCategory={selectedCategory} posts={edges} />
+      <div
+        className={`transition duration-500 ${
+          !fade ? '-translate-y-5 opacity-0' : 'opacity-100'
+        }`}
+      >
+        <CategoryList
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          categoryList={categoryList}
+        />
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+      </div>
     </MainLayout>
   );
 };

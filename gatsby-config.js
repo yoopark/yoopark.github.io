@@ -14,6 +14,7 @@ module.exports = {
     author: `Yongjun Park`,
     siteUrl: `https://yoopark.github.io`,
   },
+  trailingSlash: 'never',
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,

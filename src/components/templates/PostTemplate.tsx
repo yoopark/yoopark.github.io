@@ -70,7 +70,7 @@ export const queryMarkdownDataBySlug = graphql`
           html
           frontmatter {
             title
-            date(formatString: "YYYYMMDD")
+            date(formatString: "MMMM DD, yyyy")
             categories
           }
         }

@@ -1,7 +1,7 @@
 ---
 date: '2023-06-05'
 title: '다람쥐 헌 쳇바퀴에 타고파'
-categories: ['Test']
+categories: ['Test', 'Hello', 'Computer Science']
 ---
 
 > Reference : https://markdown-it.github.io/

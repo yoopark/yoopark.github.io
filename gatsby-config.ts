@@ -50,6 +50,12 @@ const config: GatsbyConfig = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
+          {
             resolve: 'gatsby-remark-smartypants',
             options: {
               dashes: 'oldschool',
@@ -64,9 +70,17 @@ const config: GatsbyConfig = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 768,
-              quality: 100,
+              maxWidth: 1080,
               withWebp: true,
+              linkImagesToOriginal: false, // Important!
+            },
+          },
+          `gatsby-remark-emoji`,
+          {
+            resolve: `gatsby-remark-images-zoom`,
+            options: {
+              margin: 36,
+              background: 'rgb(200, 200, 200, 0.5)',
             },
           },
           {

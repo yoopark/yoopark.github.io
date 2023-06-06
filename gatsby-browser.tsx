@@ -6,5 +6,6 @@
 
 // You can delete this file if you're not using it
 
+import 'katex/dist/katex.min.css';
 import './src/styles/global.css';
 import './src/styles/prism-one-dark.css';

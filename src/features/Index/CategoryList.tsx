@@ -12,7 +12,7 @@ export const CategoryList = ({
   categoryList,
 }: CategoryListProps) => {
   return (
-    <ul className="h-32 gap-2 select-none hstack">
+    <ul className="flex-wrap h-12 gap-2 m-auto my-8 select-none hstack whitespace-nowrap">
       {Object.entries(categoryList).map(([name, count]) => (
         <li
           key={name}

@@ -6,7 +6,7 @@ type PostHeaderProps = {
 
 export const PostHeader = ({ title, date, categories }: PostHeaderProps) => {
   return (
-    <div className="justify-center w-full h-40 gap-5 vstack md:h-60">
+    <div className="flex flex-col justify-center w-full gap-5 pl-8 my-10 border-l-4">
       <div className="flex gap-2">
         {categories.map((category) => (
           <span
@@ -17,9 +17,7 @@ export const PostHeader = ({ title, date, categories }: PostHeaderProps) => {
           </span>
         ))}
       </div>
-      <h1 className="text-2xl font-extrabold text-center md:text-4xl">
-        {title}
-      </h1>
+      <h1 className="text-2xl font-extrabold md:text-3xl">{title}</h1>
       <span className="text-sm">{date}</span>
     </div>
   );

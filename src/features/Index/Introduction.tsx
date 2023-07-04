@@ -7,7 +7,7 @@ type IntroductionProps = {
 
 export const Introduction = ({ profileImage }: IntroductionProps) => {
   return (
-    <div className="w-full center">
+    <div className="mb-20 center">
       <ProfileImage profileImage={profileImage} />
     </div>
   );

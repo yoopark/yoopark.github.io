@@ -17,7 +17,7 @@ export const PostHeader = ({ title, date, categories }: PostHeaderProps) => {
           </span>
         ))}
       </div>
-      <h1 className="text-2xl font-extrabold md:text-3xl">{title}</h1>
+      <h1 className="text-2xl font-extrabold md:text-4xl">{title}</h1>
       <span className="text-sm">{date}</span>
     </div>
   );

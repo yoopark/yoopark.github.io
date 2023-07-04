@@ -63,9 +63,8 @@ const IndexPage = ({
 
   return (
     <MainLayout>
-      <Introduction profileImage={gatsbyImageData} />
       <div
-        className={`transition duration-500 ${
+        className={`flex flex-col md:flex-row gap-8 transition duration-500 ${
           !fade ? '-translate-y-5 opacity-0' : 'opacity-100'
         }`}
       >
@@ -97,7 +96,7 @@ export const getPostList = graphql`
           }
           frontmatter {
             title
-            date(formatString: "YYYYMMDD")
+            date(formatString: "MMMM DD, YYYY")
             categories
           }
         }
@@ -105,7 +104,7 @@ export const getPostList = graphql`
     }
     file(name: { eq: "profile-image" }) {
       childImageSharp {
-        gatsbyImageData(width: 500)
+        gatsbyImageData(width: 400)
       }
     }
   }

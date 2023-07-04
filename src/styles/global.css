@@ -106,6 +106,7 @@
   html {
     font-family: 'Pretendard', Roboto, sans-serif;
     color: #262626;
+    scroll-behavior: smooth;
   }
 
   /* 이미지 드래그 방지 */
@@ -134,14 +135,17 @@
 @layer base {
   /* Markdown Style */
   .markdown-renderer {
-    line-height: 1.9;
-    font-size: 15px;
+    line-height: 1.8;
+    font-size: 16px;
   }
 
   /* Apply Padding Attribute to All Elements */
   .markdown-renderer p {
-    letter-spacing: -0.02em;
-    padding: 15px 0;
+    color: #424242;
+  }
+
+  .markdown-renderer p + p {
+    margin-top: 20px;
   }
 
   /* Adjust Heading Element Style */
@@ -149,19 +153,19 @@
   .markdown-renderer h1 {
     font-weight: 800;
     font-size: 28px;
-    margin: 40px 0 10px 0;
+    margin: 80px 0 10px 0;
   }
 
   .markdown-renderer h2 {
     font-weight: 800;
     font-size: 24px;
-    margin: 40px 0 10px 0;
+    margin: 80px 0 10px 0;
   }
 
   .markdown-renderer h3 {
-    font-weight: 800;
+    font-weight: 600;
     font-size: 20px;
-    margin: 20px 0 10px 0;
+    margin: 40px 0 10px 0;
   }
 
   .markdown-renderer hr + h1,
@@ -173,7 +177,7 @@
   /* Adjust Quotation Element Style */
   .markdown-renderer blockquote {
     margin: 30px 0;
-    padding: 5px 15px;
+    padding: 20px 30px;
     border: 1px solid black;
   }
 
@@ -236,12 +240,12 @@
 
   .markdown-renderer code[class*='language-'] *::-moz-selection,
   .markdown-renderer pre[class*='language-'] *::-moz-selection {
-    background-color: #242424;
+    background-color: #424242;
   }
 
   .markdown-renderer code[class*='language-'] *::selection,
   .markdown-renderer pre[class*='language-'] *::selection {
-    background-color: #242424;
+    background-color: #424242;
   }
 
   .markdown-renderer code[class*='language-'],

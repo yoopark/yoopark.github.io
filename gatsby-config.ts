@@ -61,6 +61,7 @@ const config: GatsbyConfig = {
               dashes: 'oldschool',
             },
           },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: 'gatsby-remark-prismjs',
             options: {

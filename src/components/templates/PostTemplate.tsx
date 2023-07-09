@@ -28,7 +28,7 @@ const PostTemplate = ({
 
   return (
     <MainLayout>
-      <div className={`transition duration-500 animate-left`}>
+      <div className={`animate-left`}>
         <PostHeader title={title} date={date} categories={categories} />
         <PostContent html={html} />
         <GiscusWidget />

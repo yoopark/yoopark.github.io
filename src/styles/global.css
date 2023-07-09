@@ -177,18 +177,18 @@
   /* Adjust Quotation Element Style */
   .markdown-renderer blockquote {
     margin: 30px 0;
-    padding: 20px 30px;
-    border: 1px solid black;
+    padding: 10px 20px;
+    border-left: 1px solid black;
   }
 
   /* Adjust List Element Style */
   .markdown-renderer ol {
-    margin-left: 20px;
+    margin: 10px 0 10px 30px;
     list-style: decimal;
   }
 
   .markdown-renderer ul {
-    margin-left: 20px;
+    margin: 10px 0 10px 30px;
     list-style: disc;
   }
 

@@ -4,7 +4,7 @@ import { CategoryList } from '@features/Index/CategoryList';
 import { PostList } from '@features/Index/PostList';
 import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 type IndexPageProps = {
   location: {
@@ -47,16 +47,10 @@ const IndexPage = ({
     [],
   );
 
-  const [fade, setFade] = useState<boolean>(false);
-
-  useEffect(() => setFade(true), []);
-
   return (
     <MainLayout>
       <div
-        className={`flex flex-col md:flex-row gap-8 transition duration-500 ${
-          !fade ? '-translate-y-5 opacity-0' : 'opacity-100'
-        }`}
+        className={`flex flex-col md:flex-row gap-8 transition duration-500 animate-top`}
       >
         <CategoryList
           selectedCategory={selectedCategory}

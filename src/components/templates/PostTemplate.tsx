@@ -5,7 +5,6 @@ import { PostContent } from '@features/Post/PostContent';
 import { PostHeader } from '@features/Post/PostHeader';
 import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
-import { useEffect, useState } from 'react';
 
 type PostTemplateProps = {
   data: {
@@ -27,17 +26,9 @@ const PostTemplate = ({
     },
   } = edges[0];
 
-  const [fade, setFade] = useState<boolean>(false);
-
-  useEffect(() => setFade(true), []);
-
   return (
     <MainLayout>
-      <div
-        className={`transition duration-500 ${
-          !fade ? '-translate-x-5 opacity-0' : 'opacity-100'
-        }`}
-      >
+      <div className={`transition duration-500 animate-left`}>
         <PostHeader title={title} date={date} categories={categories} />
         <PostContent html={html} />
         <GiscusWidget />

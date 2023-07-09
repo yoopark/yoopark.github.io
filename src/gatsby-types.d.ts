@@ -2727,7 +2727,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type getPostListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type getPostListQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly categories: ReadonlyArray<string | null> | null } | null } }> }, readonly file: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
+type getPostListQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly categories: ReadonlyArray<string | null> | null } | null } }> } };
 
 type queryMarkdownDataBySlugQueryVariables = Exact<{
   slug: InputMaybe<Scalars['String']>;

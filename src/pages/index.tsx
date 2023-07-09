@@ -1,11 +1,9 @@
 import type { PostListItemType } from '@/types/PostItem';
 import { Seo } from '@components/elements/Seo';
 import { CategoryList } from '@features/Index/CategoryList';
-import { Introduction } from '@features/Index/Introduction';
 import { PostList } from '@features/Index/PostList';
 import { MainLayout } from '@layouts/MainLayout';
 import { graphql } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { useEffect, useMemo, useState } from 'react';
 
 type IndexPageProps = {
@@ -16,20 +14,12 @@ type IndexPageProps = {
     allMarkdownRemark: {
       edges: PostListItemType[];
     };
-    file: {
-      childImageSharp: {
-        gatsbyImageData: IGatsbyImageData;
-      };
-    };
   };
 };
 
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
-    file: {
-      childImageSharp: { gatsbyImageData },
-    },
   },
 }: IndexPageProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -100,11 +90,6 @@ export const getPostList = graphql`
             categories
           }
         }
-      }
-    }
-    file(name: { eq: "profile-image" }) {
-      childImageSharp {
-        gatsbyImageData(width: 400)
       }
     }
   }

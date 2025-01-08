@@ -5,8 +5,8 @@ export const SITE: Site = {
   website: "https://yoopark.github.io", // replace this with your deployed domain
   author: "Yongjun Park",
   profile: "https://github.com/yoopark",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "🌱 티브의 개발 블로그",
+  desc: "티브의 개발 블로그입니다. 주로 웹 개발에 대해 다룹니다.",
+  title: "티브의 개발 블로그",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -26,9 +26,9 @@ export const LOCALE = {
 } as const;
 
 export const LOGO_IMAGE = {
-  enable: false,
+  enable: true,
   svg: true,
-  width: 216,
+  width: 120,
   height: 46,
 };
 

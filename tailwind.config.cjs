@@ -60,7 +60,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        mono: ["SUIT Variable", "monospace"],
+        sans: ["SUIT Variable", "sans-serif"],
+        mono: ["IBM Plex Mono", "monospace"],
       },
 
       typography: {

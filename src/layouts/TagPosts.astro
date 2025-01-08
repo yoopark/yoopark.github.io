@@ -25,7 +25,7 @@ const { page, tag, tagName } = Astro.props;
     titleTransition={tag}
     pageDesc={`"${tagName}" 태그가 있는 포스팅을 모아봤어요.`}
   >
-    <h1 slot="title" transition:name={tag}>{`태그:${tag}`}</h1>
+    <h1 slot="title" transition:name={tag}>{`태그: ${tag}`}</h1>
     <ul>
       {
         page.data.map(({ data, slug }) => (

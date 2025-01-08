@@ -1,3 +1,4 @@
+import type { GiscusProps } from "@giscus/react";
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
@@ -153,3 +154,16 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
 ];
+
+export const GISCUS: GiscusProps = {
+  repo: "yoopark/yoopark.github.io",
+  repoId: "R_kgDONnil3A",
+  category: "댓글",
+  categoryId: "DIC_kwDONnil3M4Cl2oq",
+  mapping: "title",
+  reactionsEnabled: "1",
+  emitMetadata: "0",
+  inputPosition: "bottom",
+  lang: "ko",
+  loading: "lazy",
+};

@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import Comments from "@components/Comments";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -117,7 +118,7 @@ const nextPost =
     <hr class="my-6 border-dashed" />
 
     <!-- Previous/Next Post Buttons -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <div class="grid grid-cols-1 gap-6 pb-8 sm:grid-cols-2">
       {
         prevPost && (
           <a
@@ -179,6 +180,7 @@ const nextPost =
         )
       }
     </div>
+    <Comments client:only="react" />
   </main>
   <Footer />
 </Layout>

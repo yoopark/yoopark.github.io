@@ -15,7 +15,7 @@ Updating the dependencies of a project can be tedious. However, neglecting to up
 
 ![Forrest Gump Fake Quote](/assets/forrest-gump-quote.webp)
 
-## Table of contents
+## 목차
 
 ## Updating Package Dependencies
 

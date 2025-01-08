@@ -73,11 +73,13 @@ const nextPost =
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg><span>뒤로</span>
     </button>
   </div>
   <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title inline-block">{title}</h1>
+    <h1 transition:name={slugifyStr(title)} class="post-title inline-block">
+      {title}
+    </h1>
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
@@ -106,7 +108,7 @@ const nextPost =
             d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
           ></path>
         </svg>
-        <span>Back to Top</span>
+        <span>맨 위로</span>
       </button>
 
       <ShareLinks />
@@ -140,7 +142,7 @@ const nextPost =
               </>
             </svg>
             <div>
-              <span>Previous Post</span>
+              <span>이전 글</span>
               <div class="text-sm text-skin-accent/85">{prevPost.title}</div>
             </div>
           </a>
@@ -153,7 +155,7 @@ const nextPost =
             class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           >
             <div>
-              <span>Next Post</span>
+              <span>다음 글</span>
               <div class="text-sm text-skin-accent/85">{nextPost.title}</div>
             </div>
             <svg

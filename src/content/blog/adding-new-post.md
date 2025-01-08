@@ -15,7 +15,7 @@ description:
 
 Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
 
-## Table of contents
+## 목차
 
 ## Frontmatter
 
@@ -97,7 +97,7 @@ For instance, if you want to place your table of contents just under the intro p
 
 Here are some recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
 
-## Table of contents
+## 목차
 
 <!-- the rest of the post -->
 ```

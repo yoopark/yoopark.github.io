@@ -19,7 +19,7 @@ description:
 
 In this article, I will explain step by step process of connecting AstroPaper theme with the Forestry headless CMS. So, let's get started 🎉
 
-## Table of contents
+## 목차
 
 ## What is Forestry?
 

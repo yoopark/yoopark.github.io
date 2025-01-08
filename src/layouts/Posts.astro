@@ -1,11 +1,11 @@
 ---
+import Card from "@components/Card";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Pagination from "@components/Pagination.astro";
+import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import Pagination from "@components/Pagination.astro";
-import Card from "@components/Card";
-import { SITE } from "@config";
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 
@@ -18,7 +18,7 @@ const { page } = Astro.props;
 
 <Layout title={`Posts | ${SITE.title}`}>
   <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+  <Main pageTitle="포스팅" pageDesc="작성한 글을 모두 모아봤어요.">
     <ul>
       {
         page.data.map(({ data, slug }) => (

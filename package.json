@@ -1,6 +1,6 @@
 {
-  "name": "radiant-ring",
-  "version": "4.7.0",
+  "name": "yoopark-github-io",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

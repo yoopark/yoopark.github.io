@@ -6,10 +6,22 @@ const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
+const breadcrumbMap: Record<string, string> = {
+  tags: "태그",
+  posts: "포스팅",
+  archives: "아카이브",
+  about: "소개",
+  search: "검색",
+};
+
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
 breadcrumbList[0] === "posts" &&
-  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+  breadcrumbList.splice(
+    0,
+    2,
+    `${breadcrumbMap["posts"]} (${breadcrumbList[1] || 1} 페이지)`
+  );
 
 // if breadcrumb is Home > Tags > [tag] > [page] <etc>
 // replace [tag] > [page] with [tag] (page number)
@@ -19,7 +31,9 @@ breadcrumbList[0] === "tags" &&
     1,
     3,
     `${breadcrumbList[1]} ${
-      Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"
+      Number(breadcrumbList[2]) === 1
+        ? ""
+        : "(" + breadcrumbList[2] + " 페이지)"
     }`
   );
 ---
@@ -27,7 +41,7 @@ breadcrumbList[0] === "tags" &&
 <nav class="breadcrumb" aria-label="breadcrumb">
   <ul>
     <li>
-      <a href="/">Home</a>
+      <a href="/">홈</a>
       <span aria-hidden="true">&raquo;</span>
     </li>
     {
@@ -39,12 +53,12 @@ breadcrumbList[0] === "tags" &&
               aria-current="page"
             >
               {/* make the last part lowercase in Home > Tags > some-tag */}
-              {decodeURIComponent(breadcrumb)}
+              {breadcrumbMap[breadcrumb] || decodeURIComponent(breadcrumb)}
             </span>
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}/`}>{breadcrumb}</a>
+            <a href={`/${breadcrumb}/`}>{breadcrumbMap[breadcrumb]}</a>
             <span aria-hidden="true">&raquo;</span>
           </li>
         )

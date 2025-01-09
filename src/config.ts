@@ -13,11 +13,6 @@ export const SITE: Site = {
   postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
-  editPost: {
-    url: "https://github.com/yoopark/yoopark.github.io/edit/main/src/content/blog",
-    text: "내용 변경 요청",
-    appendFilePath: true,
-  },
 };
 
 export const LOCALE = {

@@ -3,34 +3,13 @@ layout: ../layouts/AboutLayout.astro
 title: "소개"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+2025년 1월 9일 Astro 블로그로 이전하였습니다.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+[예전 블로그](https://github.com/yoopark/blog.yopark.dev)는 `Next.js`와 `Velite`를 사용하여 제작했었습니다. 딱히 불편함이 있어 이전한 것은 아니고, 단지 Astro의 아일랜드 아키텍처가 무엇인지 경험해보고자 잘 짜여진 블로그 템플릿을 커스텀하는 방식으로 공부할 심산이었습니다. 블로그에 글 쓰는 것보다 블로그 만들기를 더 좋아합니다.
 
 <div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="/assets/social-network-wallpaper.jpg" class="sm:w-1/2 mx-auto" alt="movie 'social network' wallpaper">
 </div>
 
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+이 블로그의 [레포지토리](https://github.com/yoopark/yoopark.github.io)에 들어오시면 코드를 구경하실 수 있습니다.  
+궁금하신 것이 있다면 [yopark.dev@gmail.com](mailto:yopark.dev@gmail.com)으로 메일을 보내주시거나 [에스크](https://asked.kr/yoopark)에 질문을 남겨주세요.

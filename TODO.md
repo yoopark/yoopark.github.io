@@ -1,0 +1,3 @@
+- [ ] 이미지 클릭 시 줌, 캡션
+- [ ] 글 우측에 sticky toc (IntersectionObserver 사용)
+- [ ] newtab anchor
